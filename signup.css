@@ -1,0 +1,303 @@
+/* regular version */
+
+@font-face {
+    font-family: 'NetflixSans_Light';
+    src: url('res/NetflixSans-Light.otf');
+    src: format('opentype');
+}
+
+
+/* bold version */
+
+@font-face {
+    font-family: 'NetflixSans-Heavy';
+    src: url('res/NetflixSans-Bold.otf');
+    src: format('opentype');
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'NetflixSans_Light', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+body {
+    background-color: #231f20;
+    line-height: 1.6em;
+}
+
+.maincontainer {
+    text-align: center;
+    color: white;
+    font-size: smaller;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.landinglogo {
+    display: block;
+    position: absolute;
+    width: 750px;
+    left: 35px;
+    top: 5%;
+}
+
+.signin {
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    padding: 1.2em 1.2em;
+    float: right;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    color: #0c090a;
+    opacity: 0.5;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.signin:hover {
+    opacity: 1;
+}
+
+.signin:active {
+    color: #e50914;
+}
+
+.joinnow {
+    display: inline-block;
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    padding: 0.5em 1.2em;
+    border: 5px solid #e50914;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #e50914;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.joinnow:hover {
+    color: white;
+    background-color: #e50914;
+}
+
+#signupForm {
+    color: white;
+    background-color: #231f20;
+    margin: 30px auto;
+    padding: 60px;
+    width: 70%;
+    max-width: 750px;
+}
+
+input {
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    font-size: 20px;
+    border: 0;
+    color: white;
+    background-color: #0c090a;
+}
+
+input.invalid {
+    background-color: #0c090a;
+    animation: pulse 1s;
+}
+
+input[type="checkbox"] {
+    width: 10px;
+    border: 0;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    left: 30px;
+}
+
+.tab {
+    display: none;
+}
+
+.step {
+    height: 15px;
+    width: 150px;
+    margin-bottom: 10px;
+    background-color: black;
+    border: none;
+    display: inline-block;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+.step.finish {
+    opacity: 1;
+    background-color: #e50914;
+}
+
+.button-container {
+    position: relative;
+    left: -100px;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.options {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 250px;
+    border: 0;
+    color: white;
+    opacity: 0.5;
+    font-size: 1em;
+    background-color: black;
+    transition: all 0.2s;
+}
+
+.options:hover {
+    opacity: 1;
+}
+
+.options:focus {
+    opacity: 1;
+    color: white;
+    background-color: #e50914;
+}
+
+.options>strong {
+    font-size: 1.5em;
+}
+
+.options>p {
+    font-size: 0.75em;
+    line-height: 1.4em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button#nextBtn {
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    border: 5px solid #e50914;
+    background-color: #231f20;
+    margin-top: 15px;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #e50914;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button#nextBtn:hover {
+    color: white;
+    background-color: #e50914;
+}
+
+button#prevBtn {
+    background-color: #231f20;
+    border: none;
+    opacity: 0.6;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    margin-right: 10px;
+    transition: all 0.2s;
+}
+
+button#prevBtn:hover {
+    opacity: 1;
+    color: white;
+    background-color: #231f20;
+}
+
+button#confirmBtn {
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    border: 5px solid #e50914;
+    background-color: #231f20;
+    margin-top: 15px;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #e50914;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button#confirmBtn:hover {
+    color: white;
+    background-color: #e50914;
+}
+
+.paymentoptions {
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    font-size: 20px;
+    border: 0;
+    color: white;
+    background-color: #0c090a;
+}
+
+p#terms {
+    font-size: 12px;
+    color: white;
+    opacity: 0.2;
+    letter-spacing: 0.03em;
+    line-height: 1.5em;
+}
+
+.finalchoice {
+    margin: 0 auto;
+    margin-bottom: 13px;
+    width: 450px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #e50914;
+}
+
+#finalchoice-title {
+    font-size: 1.2em;
+    margin-bottom: -20px;
+}
+
+#finalchoice-price {
+    font-size: 3em;
+    margin-bottom: 21px;
+}
+
+
+/* Animated keyframes */
+
+@keyframes pulse {
+    0% {
+        background-color: #0c090a;
+    }
+    50% {
+        background-color: #fa7a81;
+    }
+    100% {
+        background-color: #0c090a;
+    }
+}

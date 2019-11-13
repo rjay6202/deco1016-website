@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+<html>
+
+<head>
+    <title>Netflix</title>
+    <link rel="stylesheet" href="signup.css" type="text/css">
+</head>
+
+<body>
+    <a href="" class="signin">SIGN IN</a>
+    <img src="res\Netflix_Logo_RGB.png" alt="logo" width="150px" class="logo">
+    <form id="signupForm" action="">
+        <div style="text-align: center; ">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+        <div class="tab">
+            <h2>Create your account.</h2>
+            <p>In order to use Netflix, you are going to need register an account. All it takes is a couple minutes of your time, as well as some basic information to get you started.</p>
+            <p><input type="text" placeholder="name" oninput="this.className = ''"></p>
+            <p><input type="text" placeholder="username" oninput="this.className = ''"></p>
+            <p><input type="password" placeholder="password" oninput="this.className = ''"></p>
+        </div>
+        <div class="tab">
+            <h2>Decide on your plan.</h2>
+            <p>The following are the different payment plans available. Each has different benefits and features so choose one which suits <b>you</b> best.</p>
+            <div class="button-container">
+                <button type="button" class="options" onclick="paymentPlan1()"><b>BASIC</b><br>$9.99<br><p>Lets you stream TV shows and movies from Netflix on one device at a time in standard definition (SD). This plan also lets you download titles to one phone or tablet.</p></button>
+                <button type="button" class="options" onclick="paymentPlan2()"><b>STANDARD</b><br>$13.99<br><p>Lets you stream TV shows and movies from Netflix on two devices at the same time and in high definition (HD) when available. This plan also lets you download titles to two phones or tablets.</p></button>
+                <button type="button" class="options" onclick="paymentPlan3()"><b>PREMIUM</b><br>$19.99<br><p>Lets you stream TV shows and movies from Netflix on four devices at the same time and in high definition (HD) and ultra high definition (UHD) when available. This plan also lets you download titles to four phones or tablets.</p></button>
+            </div>
+        </div>
+        <div class="tab">
+            <h2>Setup your payment.</h2>
+            <select class="paymentoptions">
+                <option disabled selected>payment options</option>
+                <option>VISA</option>
+                <option>Mastercard</option>
+                <option>Paypal</option>
+            </select>
+            <p><input type="text" placeholder="card number" oninput="this.className = ''" maxlength="14"></p>
+            <p><input type="text" placeholder="expiry date" oninput="this.className = ''" maxlength="4"></p>
+            <p><input type="text" placeholder="cvv" oninput="this.className = ''" maxlength="4"></p>
+            <p id="terms">By ticking the box below, you agree to our Terms of Use and Privacy Statement and that you are over 18. You may canel at any time during your free trial and you will not be charged. Nextflix will automatically continue your membership at the
+                end of your free trial and charge the membership free to your payement method on a monthly basis until your cancel. </p>
+            <p><input type="checkbox" oninput="this.className = ''" aria-required="true">I agree</p>
+        </div>
+        <div class="tab">
+            <h2>Confirm your membership.</h2>
+            <p>The following is a summary of your Netflix account.</p>
+            <p style="opacity: 0.2;">Your order:</p>
+            <div class="finalchoice">
+                <h3 id="finalchoice-title">STANDARD</h3>
+                <h2 id="finalchoice-price">$13.99</h2>
+                <p id="finalchoice-desc">Watch on 2 screens at a time with HD available.</p>
+            </div>
+        </div>
+        <div style="overflow: auto;">
+            <div style="float: right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)"><b>PREV</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">NEXT</button>
+                <button type="button" id="confirmBtn" onclick="window.location.href = 'mainpage.html';">CONFIRM</button>
+            </div>
+        </div>
+    </form>
+    <script src="signup.js"></script>
+</body>
+
+</html>
